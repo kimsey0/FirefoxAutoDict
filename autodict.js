@@ -21,7 +21,7 @@ async function detectLanguage(event) {
     const node = event.target;
     const content = getContent(node);
 
-    //console.log("Detecting language for", node, "with content", content)
+    // console.log("Detecting language for", node, "with content", content)
     const detectedLanguage = await browser.i18n.detectLanguage(content);
     if (detectedLanguage.isReliable && detectedLanguage.languages.length > 0) {
         const language = detectedLanguage.languages[0].language;
@@ -46,7 +46,7 @@ function detectChanges(node) {
         return;
     }
 
-    console.log("Adding listener for", node);
+    // console.log("Adding listener for", node);
 
     node.addEventListener("input", throttledDetectLanguages);
 
@@ -54,6 +54,10 @@ function detectChanges(node) {
 }
 
 function detectChildChanges(root) {
+    if (!root.querySelectorAll) {
+        return;
+    }
+
     const nodes = root.querySelectorAll("input, textarea, div[contenteditable]");
     for (const node of nodes) {
         detectChanges(node);
