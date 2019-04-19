@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Automatic Dictionary Selection for Spell Checking",
+  "description": "Automatically changes the dictionary used for spell checking based on the language of text in input fields.",
+  "homepage_url": "https://github.com/kimsey0/FirefoxAutoDict",
+  "version": "1.0",
+  "icons": {
+    "48": "icons/icon.png",
+    "96": "icons/icon@2x.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./autodict.js"]
+    }
+  ]
+}
