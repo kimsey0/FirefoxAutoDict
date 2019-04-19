@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["./autodict.js"]
+      "js": ["lodash.throttle.js", "./autodict.js"]
     }
   ]
 }

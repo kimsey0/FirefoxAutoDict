@@ -33,6 +33,8 @@ async function detectLanguage(event) {
     }
 }
 
+const throttledDetectLanguages = _.throttle(detectLanguage, 2000);
+
 function detectChanges(node) {
     if(!node.spellcheck) {
         return;
@@ -46,8 +48,7 @@ function detectChanges(node) {
 
     console.log("Adding listener for", node);
 
-    // TODO: Debounce.
-    node.addEventListener("input", detectLanguage);
+    node.addEventListener("input", throttledDetectLanguages);
 
     detectLanguage({ target: node });
 }
