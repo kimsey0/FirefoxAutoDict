@@ -3,6 +3,8 @@ Automatically changes the dictionary used for spell checking based on the langua
 Uses the [Compact Language Detection framework](https://github.com/CLD2Owners/cld2) to determine the text language.
 Icon by A’ Design Award & Competition, Onur Müştak Çobanlı and Farhat Datta through http://www.languageicon.org/
 
+Install from https://addons.mozilla.org/firefox/addon/automatic-spelling-language/
+
 ## Tested on sites
 - GitHub
 - Gmail
