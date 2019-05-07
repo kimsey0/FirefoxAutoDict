@@ -1,6 +1,6 @@
 # Automatic Spell Checking Language Selection Extension for Firefox
 Automatically changes the dictionary used for spell checking based on the language of text in input fields.
-Uses the [Compact Language Detection framework](https://github.com/CLD2Owners/cld2) to determine the text language.
+Uses the [Compact Language Detection framework](https://github.com/CLD2Owners/cld2) built into Firefox to determine the text language. No text or other data is sent to any external services.
 Icon by A’ Design Award & Competition, Onur Müştak Çobanlı and Farhat Datta through http://www.languageicon.org/
 
 Install from https://addons.mozilla.org/firefox/addon/automatic-spelling-language/
